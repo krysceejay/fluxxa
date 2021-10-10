@@ -11,9 +11,16 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1E84859684BD4083B8A298C7 /* helvetica-compressed-5871d14b6903a.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2F5D83AE2434CA6547DF9 /* helvetica-compressed-5871d14b6903a.otf */; };
+		29655E94FF84483E9BBEAF03 /* helvetica-rounded-bold-5871d05ead8de.otf in Resources */ = {isa = PBXBuildFile; fileRef = 81E70A660BDE4E2786711498 /* helvetica-rounded-bold-5871d05ead8de.otf */; };
+		4E1DC5DF381841B48761B985 /* Helvetica-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F435CC01D7E4C4A8D40EA4C /* Helvetica-BoldOblique.ttf */; };
+		78B71F1EDBC64949B8D2A393 /* helvetica-light-587ebe5a59211.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE085CA57A7347B5B37CC512 /* helvetica-light-587ebe5a59211.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		89857D010E4F60821EDE8D9E /* libPods-Fluxxa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02061F4AD7CE116274B84E54 /* libPods-Fluxxa.a */; };
+		A261AF3A0EBF479C8C6B4BD3 /* Helvetica-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65BD533390BD423ABA6108EA /* Helvetica-Oblique.ttf */; };
+		ABD7FA76A8CE4BEA9AA6FB8A /* Helvetica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5032C6779EF45EDBCA886DE /* Helvetica.ttf */; };
 		B8E02010EE600318D7C96FD1 /* libPods-Fluxxa-FluxxaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 206B3732FAE50EE397633916 /* libPods-Fluxxa-FluxxaTests.a */; };
+		EBAEAB7E54B64CED966FFE92 /* Helvetica-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DD78F7EDF49BAB32AAFC4 /* Helvetica-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +46,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Fluxxa/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Fluxxa/main.m; sourceTree = "<group>"; };
 		206B3732FAE50EE397633916 /* libPods-Fluxxa-FluxxaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Fluxxa-FluxxaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B6DD78F7EDF49BAB32AAFC4 /* Helvetica-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Helvetica-Bold.ttf"; path = "../src/assets/fonts/Helvetica-Bold.ttf"; sourceTree = "<group>"; };
+		4AD2F5D83AE2434CA6547DF9 /* helvetica-compressed-5871d14b6903a.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "helvetica-compressed-5871d14b6903a.otf"; path = "../src/assets/fonts/helvetica-compressed-5871d14b6903a.otf"; sourceTree = "<group>"; };
+		65BD533390BD423ABA6108EA /* Helvetica-Oblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Helvetica-Oblique.ttf"; path = "../src/assets/fonts/Helvetica-Oblique.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Fluxxa/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81E70A660BDE4E2786711498 /* helvetica-rounded-bold-5871d05ead8de.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "helvetica-rounded-bold-5871d05ead8de.otf"; path = "../src/assets/fonts/helvetica-rounded-bold-5871d05ead8de.otf"; sourceTree = "<group>"; };
 		897E42F6E6565E381728FEBC /* Pods-Fluxxa-FluxxaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fluxxa-FluxxaTests.release.xcconfig"; path = "Target Support Files/Pods-Fluxxa-FluxxaTests/Pods-Fluxxa-FluxxaTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F435CC01D7E4C4A8D40EA4C /* Helvetica-BoldOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Helvetica-BoldOblique.ttf"; path = "../src/assets/fonts/Helvetica-BoldOblique.ttf"; sourceTree = "<group>"; };
+		C5032C6779EF45EDBCA886DE /* Helvetica.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Helvetica.ttf; path = ../src/assets/fonts/Helvetica.ttf; sourceTree = "<group>"; };
+		CE085CA57A7347B5B37CC512 /* helvetica-light-587ebe5a59211.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "helvetica-light-587ebe5a59211.ttf"; path = "../src/assets/fonts/helvetica-light-587ebe5a59211.ttf"; sourceTree = "<group>"; };
 		D21547C965521DB14F92CE30 /* Pods-Fluxxa-FluxxaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fluxxa-FluxxaTests.debug.xcconfig"; path = "Target Support Files/Pods-Fluxxa-FluxxaTests/Pods-Fluxxa-FluxxaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF351D7F89BA3F04BC116265 /* Pods-Fluxxa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fluxxa.release.xcconfig"; path = "Target Support Files/Pods-Fluxxa/Pods-Fluxxa.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F8C2102BABFE301CDB35F63D /* Pods */,
+				A4991D1646A749FB9C6A92F5 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +150,21 @@
 				00E356EE1AD99517003FC87E /* FluxxaTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A4991D1646A749FB9C6A92F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DD78F7EDF49BAB32AAFC4 /* Helvetica-Bold.ttf */,
+				9F435CC01D7E4C4A8D40EA4C /* Helvetica-BoldOblique.ttf */,
+				4AD2F5D83AE2434CA6547DF9 /* helvetica-compressed-5871d14b6903a.otf */,
+				CE085CA57A7347B5B37CC512 /* helvetica-light-587ebe5a59211.ttf */,
+				65BD533390BD423ABA6108EA /* Helvetica-Oblique.ttf */,
+				81E70A660BDE4E2786711498 /* helvetica-rounded-bold-5871d05ead8de.otf */,
+				C5032C6779EF45EDBCA886DE /* Helvetica.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		F8C2102BABFE301CDB35F63D /* Pods */ = {
@@ -245,6 +275,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EBAEAB7E54B64CED966FFE92 /* Helvetica-Bold.ttf in Resources */,
+				4E1DC5DF381841B48761B985 /* Helvetica-BoldOblique.ttf in Resources */,
+				1E84859684BD4083B8A298C7 /* helvetica-compressed-5871d14b6903a.otf in Resources */,
+				78B71F1EDBC64949B8D2A393 /* helvetica-light-587ebe5a59211.ttf in Resources */,
+				A261AF3A0EBF479C8C6B4BD3 /* Helvetica-Oblique.ttf in Resources */,
+				29655E94FF84483E9BBEAF03 /* helvetica-rounded-bold-5871d05ead8de.otf in Resources */,
+				ABD7FA76A8CE4BEA9AA6FB8A /* Helvetica.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

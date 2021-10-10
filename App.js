@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+    fontFamily: 'Helvetica-Bold',
   },
   sectionDescription: {
     marginTop: 8,
@@ -106,6 +107,7 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+    fontFamily: 'Helvetica-Bold',
   },
 });
 
