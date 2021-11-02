@@ -2,10 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Home from '../../screens/home/Home'
-import Clients from '../../screens/clients/Clients'
 import Profile from '../../screens/profile/Profile'
 import Transaction from '../../screens/transactions/Transaction'
 import Invoice from '../../screens/invoice/Invoice'
+import ClientStack from '../../navigation/stacks/clientStack'
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +31,7 @@ const BottomTabs = () => {
                 <Image source={require('../../assets/img/icons/home.png')} resizeMode="contain" style={{width: 24, height: 24}} /> 
             )
         }} />
-        <Tab.Screen name="Clients" component={Clients} options={{
+        <Tab.Screen name="Clients" component={ClientStack} options={{
             tabBarIcon: ({focused}) => (
                 focused ? 
                 <Image source={require('../../assets/img/icons/client-active.png')} resizeMode="contain" style={{width: 24, height: 24}} /> :
