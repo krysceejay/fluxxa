@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { Text, View, SafeAreaView, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
 //import { AlphabetList } from "react-native-section-alphabet-list"
 
-const Invoice = () => {
+const Invoice = ({navigation}) => {
     const data = [
         { value: 'Wallis and Futuna', key: 'WF' },
         { value: 'Western Sahara', key: 'EH' },
@@ -330,7 +330,7 @@ const Invoice = () => {
               renderItem={renderListItem}
               />
             <TouchableOpacity 
-            onPress={() => {}}
+            onPress={() => navigation.navigate('NewInvoice')}
             style={{
                 position: 'absolute',
                 bottom: 25,

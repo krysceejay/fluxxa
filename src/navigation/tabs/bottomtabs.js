@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Home from '../../screens/home/Home'
 import Profile from '../../screens/profile/Profile'
 import Transaction from '../../screens/transactions/Transaction'
-import Invoice from '../../screens/invoice/Invoice'
 import ClientStack from '../../navigation/stacks/clientStack'
+import InvoiceStack from '../../navigation/stacks/invoiceStack'
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +38,7 @@ const BottomTabs = () => {
                 <Image source={require('../../assets/img/icons/client.png')} resizeMode="contain" style={{width: 24, height: 24}} /> 
             )
         }} />
-        <Tab.Screen name="Invoices" component={Invoice} options={{
+        <Tab.Screen name="Invoices" component={InvoiceStack} options={{
             tabBarIcon: ({focused}) => (
                 focused ? 
                 <Image source={require('../../assets/img/icons/invoice-active.png')} resizeMode="contain" style={{width: 24, height: 24}} /> :

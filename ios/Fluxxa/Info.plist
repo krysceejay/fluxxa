@@ -61,5 +61,9 @@
 		<string>helvetica-rounded-bold-5871d05ead8de.otf</string>
 		<string>Helvetica.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like access to your photo gallery</string>
+    <key>NSCameraUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like to use your camera</string>
 </dict>
 </plist>

@@ -35,20 +35,21 @@ const NewClient = ({closeModal}) => {
         <SafeAreaView style={{flex: 1}}>
             <KeyboardAvoidingView 
             style={{flex: 1}}>
+            <View style={{paddingTop: 20, paddingBottom: 15, paddingHorizontal: 24,}}>
+                <Text style={{fontSize: 18, fontFamily: 'Helvetica-Bold', color: "#000"}}>New Client</Text>
+            </View>
             <ScrollView 
             keyboardShouldPersistTaps="handled" 
             showsVerticalScrollIndicator={false}
             bounces={false}
             contentContainerStyle={{
             paddingHorizontal: 24,
-            marginTop: 30,
-            marginBottom: 10,
+            paddingBottom: 80,
             }}>
-                <Text style={{fontSize: 24, fontFamily: 'Helvetica-Bold', color: "#000"}}>New Client</Text>
                 <TouchableOpacity 
                 activeOpacity={0.5}
                 onPress={() => {}}
-                style={{flexDirection: 'row', alignItems: 'center', marginVertical: 18}}>
+                style={{flexDirection: 'row', alignItems: 'center', marginVertical: 10 }}>
                     <Image source={require('../../assets/img/icons/account.png')} resizeMode="contain" style={{width: 20, height: 20}} />
                     <Text style={{color: '#7C7C7C', fontSize: 14, fontFamily: 'Helvetica', marginLeft: 10}}>Import from Contacts</Text>
                 </TouchableOpacity>
