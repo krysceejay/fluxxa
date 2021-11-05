@@ -1,35 +1,43 @@
 import React, {useState} from 'react'
-import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Image, Switch, Platform, TextInput } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TouchableOpacity, Image, Switch, Platform, TextInput, Modal } from 'react-native'
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker'
+import SelectClient from '../../components/Modal/SelectClient'
+import SelectItem from '../../components/Modal/SelectItem'
 
 const invoiceData = [
     { itemName: 'Shoe', qty: 1, price: 80 },
     { itemName: 'Shoe', qty: 1, price: 80 },
     { itemName: 'Shoe', qty: 1, price: 80 },
 ]
+const clientData = [
+    { name: 'Akondu', clId: 1 },
+    { name: 'Chibuike', clId: 2 },
+    { name: 'Peter', clId: 3 },
+]
 
 const NewInvoice = ({navigation}) => {
 
     const [formData, setFormData] = useState({
-        clubname: '',
-        clubgenre: [],
+        clientId: '',
+        clientName: '',
+        invoiceItems: [],
          photo: null,
          isPaid: false,
-         clubdescription: '',
-         meetingDetails: '',
-         modalVisible: false,
          isLoading: false,
          note: ''
        })
 
+    const [showClientModal, setShowClient] = useState(false)
+    const [showSelectItemModal, setShowSelectItem] = useState(false)
+
+    //const [showAccount, setShowAccount] = useState(false)
+
        const {
-        clubname,
-        clubgenre,
+        clientId,
+        clientName,
+        invoiceItems,
         photo,
         isPaid,
-        clubdescription,
-        meetingDetails,
-        modalVisible,
         isLoading,
         note
       } = formData
@@ -37,6 +45,14 @@ const NewInvoice = ({navigation}) => {
       const togglePaidSwitch = () => {
         setFormData({...formData, isPaid: !isPaid})
       }
+
+      const closeClientModal = () => {
+        setShowClient(false)
+      } 
+
+      const closeItemModal = () => {
+        setShowSelectItem(false)
+      } 
 
     const onChange = name => text => setFormData({...formData, [name]: text})
 
@@ -104,7 +120,7 @@ const NewInvoice = ({navigation}) => {
                     <TouchableOpacity 
                     activeOpacity={0.5}
                     onPress={handleChoosePhoto}
-                    style={{backgroundColor: '#7C7C7C', marginRight: 20, width: 120, borderRadius: 8, overflow: 'hidden'}}
+                    style={{backgroundColor: '#7C7C7C', marginRight: 20, width: 120, height: 120, borderRadius: 8, overflow: 'hidden'}}
                     >
                         {photo ? (
                         <Image source={{uri: photo.uri}} style={{height: '100%', width: '100%', resizeMode: 'cover', borderRadius: 8}} />
@@ -142,7 +158,7 @@ const NewInvoice = ({navigation}) => {
                     <Text style={{fontSize: 14, fontFamily: 'Helvetica-Bold', color: "#000"}}>Billed To</Text>
                     <TouchableOpacity
                     activeOpacity={0.5}
-                    onPress={() => {}}
+                    onPress={() => setShowClient(true)}
                     style={{
                         flexDirection: 'row', 
                         justifyContent: 'space-between', 
@@ -155,7 +171,7 @@ const NewInvoice = ({navigation}) => {
                         marginTop: 10
                     }}
                     >
-                        <Text style={{fontSize: 15, fontFamily: 'Helvetica', color: "#000"}}>Akondu</Text>
+                        <Text style={{fontSize: 15, fontFamily: 'Helvetica', color: "#000"}}>{clientName}</Text>
                         <Image source={require('../../assets/img/icons/arrow-down.png')} resizeMode="contain" style={{width: 12, height: 12}} />
                     </TouchableOpacity>
                 </View>
@@ -165,13 +181,13 @@ const NewInvoice = ({navigation}) => {
                         borderRadius: 8,
                         marginTop: 10,
                         overflow: 'hidden',
-                        borderColor: 'green',
+                        borderColor: '#cdcff5',
                         borderWidth: 1
                     }}>
                         <View style={{
                             flexDirection: 'row',  
                             alignItems: 'center', 
-                            backgroundColor: '#d1ecf1', 
+                            backgroundColor: '#eeeffc', 
                             padding: 14, 
                             
                             }}>
@@ -180,14 +196,14 @@ const NewInvoice = ({navigation}) => {
                             <Text style={{fontSize: 15, fontFamily: 'Helvetica-Bold', color: "#000", flex: 1}}>Price (₦)</Text>
                             <Text style={{fontSize: 15, fontFamily: 'Helvetica-Bold', color: "#000", flex: 1}}>Subtotal</Text>
                         </View>
-                        {invoiceData.map((it, ind) => (
+                        {invoiceItems.map((it, ind) => (
                             <View 
                             key={ind}
                             style={{
                             flexDirection: 'row', 
                             alignItems: 'center', 
                             padding: 14, 
-                            backgroundColor: ind % 2 == 0 ? '#fff' : '#d1ecf1',
+                            backgroundColor: ind % 2 == 0 ? '#fff' : '#eeeffc',
                             
                             }}>
                             <Text style={{fontSize: 15, fontFamily: 'Helvetica', color: "#000", flex: 1}}>Shoe</Text>
@@ -199,7 +215,7 @@ const NewInvoice = ({navigation}) => {
                     </View>
                     <TouchableOpacity
                     activeOpacity={0.5}
-                    onPress={() => {}}
+                    onPress={() => setShowSelectItem(true)}
                     style={{
                         borderWidth: 1,  
                         paddingVertical: 12,
@@ -297,7 +313,64 @@ const NewInvoice = ({navigation}) => {
                     placeholder="Drop a message for the recipient"
                     />
                 </View>
+                <View style={{flexDirection: 'row', marginTop: 50}}>
+                    <TouchableOpacity 
+                    activeOpacity={0.5}
+                    onPress={() => {}}
+                    style={{
+                        flex: 1,  
+                        backgroundColor: '#EFEFEF', 
+                        padding: 12,
+                        borderRadius: 6,
+                        marginRight: 2,
+                        }}>
+                        <Text style={{color: '#000', textAlign: 'center', textTransform: 'capitalize', fontSize: 16, fontFamily: 'Helvetica'}}>Preview</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                    activeOpacity={0.5}
+                    style={{
+                        flex: 1, 
+                        backgroundColor: '#575EDF', 
+                        padding: 12,
+                        borderRadius: 6,
+                        marginLeft: 2,
+                        }}>
+                        <Text style={{color: '#FFFFFF', textAlign: 'center', textTransform: 'capitalize', fontSize: 16, fontFamily: 'Helvetica'}}>Create Invoice</Text>
+                    </TouchableOpacity>
+                </View>
             </ScrollView>
+            <Modal
+            animationType="slide"
+            transparent={true}
+            visible={showClientModal}>
+                <View style={{
+                    flex: 1,
+                    backgroundColor: '#fff',
+                }}>
+                    <SelectClient 
+                    closeModal={closeClientModal} 
+                    setFormData={setFormData}
+                    formData={formData}
+                    data={clientData}
+                    />
+                </View>
+            </Modal>
+            <Modal
+            animationType="slide"
+            transparent={true}
+            visible={showSelectItemModal}>
+                <View style={{
+                    flex: 1,
+                    backgroundColor: '#fff',
+                }}>
+                    <SelectItem 
+                    closeModal={closeItemModal} 
+                    setFormData={setFormData}
+                    formData={formData}
+                    data={clientData}
+                    />
+                </View>
+            </Modal>
         </SafeAreaView>
     )
 }
